@@ -1,6 +1,6 @@
 {
   "name": "@voidvoxel/limited-queue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A queue with a limited amount of slots",
   "main": "src/LimitedQueue.js",
   "directories": {
@@ -10,6 +10,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ashlynn \"Void Voxel\" Juniper",
   "license": "MPL-2.0"
 }
