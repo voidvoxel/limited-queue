@@ -3,7 +3,7 @@ export default class LimitedQueue extends Array {
 
 
     constructor (capacity) {
-        super(capacity);
+        super(0);
 
         this.setCapacity(capacity);
     }
@@ -18,12 +18,21 @@ export default class LimitedQueue extends Array {
         super.push(...values);
 
         while (this.length > this.getCapacity()) {
-            this.shift();
+            const overflow = super.shift();
+
+            this._overflow(overflow);
         }
+
+        return this.length;
     }
 
 
     setCapacity (capacity) {
         this.#capacity = capacity;
+    }
+
+
+    _overflow (value) {
+        return value;
     }
 }
