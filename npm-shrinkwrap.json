@@ -1,12 +1,12 @@
 {
   "name": "@voidvoxel/limited-queue",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "@voidvoxel/limited-queue",
-      "version": "2.0.1",
+      "version": "2.0.2",
       "license": "MPL-2.0",
       "devDependencies": {
         "jest": "^29.7.0"
