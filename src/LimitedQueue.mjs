@@ -1,4 +1,4 @@
-class LimitedQueue extends Array {
+export default class LimitedQueue extends Array {
     #capacity
 
 
@@ -27,6 +27,3 @@ class LimitedQueue extends Array {
         this.#capacity = capacity;
     }
 }
-
-
-module.exports = LimitedQueue;

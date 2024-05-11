@@ -1,4 +1,5 @@
-const LimitedQueue = require('..');
+// import LimitedQueue from "limited-queue";
+import LimitedQueue from "../src/LimitedQueue.mjs";
 
 
 test(

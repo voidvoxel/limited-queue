@@ -2,12 +2,13 @@
   "name": "@voidvoxel/limited-queue",
   "version": "1.0.2",
   "description": "A queue with a limited amount of slots",
-  "main": "src/LimitedQueue.js",
+  "main": "src/LimitedQueue.mjs",
+  "type": "module",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [
     "limited",
