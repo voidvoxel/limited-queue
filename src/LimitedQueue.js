@@ -5,9 +5,11 @@ class LimitedQueue extends Array {
         this.setCapacity(capacity);
     }
 
+
     getCapacity () {
         return this._capacity;
     }
+
 
     push (...values) {
         super.push(...values);
@@ -16,6 +18,7 @@ class LimitedQueue extends Array {
             this.shift();
         }
     }
+
 
     setCapacity (capacity) {
         this._capacity = capacity;
