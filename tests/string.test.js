@@ -53,21 +53,19 @@ test(
 test(
     "process overflow values",
     () => {
-        const queue = new LimitedQueue(3);
-        const overflowQueue = new LimitedQueue(2);
+        const overflow = [];
 
-        queue._overflow = value => overflowQueue.push(value);
+        class OverflowQueue extends LimitedQueue {
+            _overflow (value) {
+                overflow.push(value);
+            }
+        }
+
+        const queue = new OverflowQueue(3);
 
         queue.push('1', '2', '3', '4', '5');
 
-        const q0 = queue.shift();
-        const q1 = queue.shift();
-        const q2 = queue.shift();
-
-        const oq0 = overflowQueue.shift();
-        const oq1 = overflowQueue.shift();
-
-        expect(oq0).toBe('1');
-        expect(oq1).toBe('2');
+        expect(overflow[0]).toBe('1');
+        expect(overflow[1]).toBe('2');
     }
 );
