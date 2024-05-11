@@ -14,7 +14,7 @@ npm i limited-queue
 
 ```js
 // Import the library.
-import LimitedQueue from "limited-queue";
+import LimitedQueue from "@voidvoxel/limited-queue";
 
 // Create a new queue with a capacity of 3.
 const queue = new LimitedQueue(3);
@@ -33,7 +33,7 @@ console.log(queue);
 
 ```js
 // Import the library.
-import LimitedQueue from "limited-queue";
+import LimitedQueue from "@voidvoxel/limited-queue";
 
 const extras = [];
 
