@@ -3,7 +3,7 @@ import LimitedQueue from "../src/LimitedQueue.mjs";
 
 
 test(
-    "create a new `LimitedQueue`",
+    "create a new instance",
     () => {
         const queue = new LimitedQueue(3);
 
@@ -17,7 +17,7 @@ test(
 
 
 test(
-    "push values onto the `LimitedQueue`",
+    "push values",
     () => {
         const queue = new LimitedQueue(3);
 
@@ -33,7 +33,7 @@ test(
 
 
 test(
-    "shift the next value from a `LimitedQueue`",
+    "shift the next value",
     () => {
         const queue = new LimitedQueue(3);
 
