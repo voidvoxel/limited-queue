@@ -12,7 +12,7 @@ class LimitedQueue extends Array {
     push (...values) {
         super.push(...values);
 
-        while (this.length >= this.getCapacity()) {
+        while (this.length > this.getCapacity()) {
             this.shift();
         }
     }
