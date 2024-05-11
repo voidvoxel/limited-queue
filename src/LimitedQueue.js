@@ -22,4 +22,5 @@ class LimitedQueue extends Array {
     }
 }
 
+
 module.exports = LimitedQueue;
