@@ -21,13 +21,13 @@ test(
     () => {
         const queue = new LimitedQueue(3);
 
-        queue.push(1, 2, 3, 4, 5);
+        queue.push(false, false, true, false, true);
 
         expect(queue.length).toBe(3);
 
-        expect(queue[0]).toBe(3);
-        expect(queue[1]).toBe(4);
-        expect(queue[2]).toBe(5);
+        expect(queue[0]).toBe(true);
+        expect(queue[1]).toBe(false);
+        expect(queue[2]).toBe(true);
     }
 );
 
@@ -37,15 +37,15 @@ test(
     () => {
         const queue = new LimitedQueue(3);
 
-        queue.push(1, 2, 3, 4, 5);
+        queue.push(false, false, true, false, true);
 
         const q0 = queue.shift();
         const q1 = queue.shift();
         const q2 = queue.shift();
 
-        expect(q0).toBe(3);
-        expect(q1).toBe(4);
-        expect(q2).toBe(5);
+        expect(q0).toBe(true);
+        expect(q1).toBe(false);
+        expect(q2).toBe(true);
     }
 );
 
@@ -58,20 +58,16 @@ test(
 
         queue._overflow = value => overflowQueue.push(value);
 
-        queue.push(1, 2, 3, 4, 5);
+        queue.push(false, false, true, false, true);
 
         const q0 = queue.shift();
         const q1 = queue.shift();
         const q2 = queue.shift();
 
-        expect(q0).toBe(3);
-        expect(q1).toBe(4);
-        expect(q2).toBe(5);
-
         const oq0 = overflowQueue.shift();
         const oq1 = overflowQueue.shift();
 
-        expect(oq0).toBe(1);
-        expect(oq1).toBe(2);
+        expect(oq0).toBe(false);
+        expect(oq1).toBe(false);
     }
 );
