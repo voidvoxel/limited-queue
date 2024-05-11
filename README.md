@@ -37,7 +37,7 @@ import LimitedQueue from "@voidvoxel/limited-queue";
 
 const extras = [];
 
-class OverflowQueue {
+class OverflowQueue extends LimitedQueue {
     _overflow (value) {
         extras.push(value);
     }
