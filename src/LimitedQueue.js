@@ -1,4 +1,7 @@
 class LimitedQueue extends Array {
+    #capacity
+
+
     constructor (capacity) {
         super(capacity);
 
@@ -7,7 +10,7 @@ class LimitedQueue extends Array {
 
 
     getCapacity () {
-        return this._capacity;
+        return this.#capacity;
     }
 
 
@@ -21,7 +24,7 @@ class LimitedQueue extends Array {
 
 
     setCapacity (capacity) {
-        this._capacity = capacity;
+        this.#capacity = capacity;
     }
 }
 
